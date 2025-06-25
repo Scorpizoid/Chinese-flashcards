@@ -1,0 +1,32 @@
+;
+; Installation file for Kiina Application
+
+;Languages
+&FI
+
+;Header, old UID 0xA0000181
+#{"Kiina"},(0x2002AA27),1,0,0
+
+;Localised Vendor name
+%{"Sami Vuori"}
+
+;Unique Vendor name
+:"Sami Vuori"
+
+;Supports S60 v 3.0
+[0x101F7961], 0, 0, 0, {"S60ProductID"}
+
+; Browser Control Sample App 
+"..\..\..\epoc32\release\gcce\urel\Kiina.exe"-"C:\sys\bin\Kiina.exe"
+
+; Browser resources and bitmaps
+"..\..\..\epoc32\data\z\resource\apps\Kiina.rsc"-"C:\Resource\apps\Kiina.rsc"
+"..\..\..\epoc32\data\z\private\10003a3f\import\apps\Kiina_reg.RSC"-"C:\private\10003a3f\import\apps\Kiina_reg.rsc"
+"..\gfx\Kiina.mbm"-"C:\Resource\apps\Kiina.mbm"
+
+;required for application to be covered by backup/restore facility 
+;"backup_registration.xml"-"!:\private\A0000181\backup_registration.xml"
+"..\gfx\bg.mbm"-"C:\private\2002AA27\bg.mbm"
+"..\cards\flashcard.mbm"-"C:\private\2002AA27\flashcard.mbm"
+"..\about.html"-"C:\private\2002AA27\about.html"
+

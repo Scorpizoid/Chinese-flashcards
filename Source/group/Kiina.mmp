@@ -1,0 +1,73 @@
+/*
+* ==============================================================================
+*  Name        : Kiina.mmp
+*  Part of     : Kiina
+*  Interface   : Browser Control API
+*  Description : This is the project specification file
+		for Kiina.
+*  Version     : 
+*
+*  Copyright (c) 2005-2006 Nokia Corporation.
+*  This material, including documentation and any related 
+*  computer programs, is protected by copyright controlled by 
+*  Nokia Corporation.
+* ==============================================================================
+*/
+
+TARGET      Kiina.exe
+TARGETTYPE  exe
+UID  0x100039CE 0x2002AA27
+EPOCSTACKSIZE	  0x5000
+
+EPOCHEAPSIZE 0x5000 0x1000000
+
+VENDORID    0
+
+CAPABILITY	 NetworkServices WriteDeviceData ReadDeviceData
+
+
+SOURCEPATH ..\src
+SOURCE  Kiina.cpp
+SOURCE  KiinaUi.cpp
+SOURCE  KiinaDocument.cpp
+SOURCE  KiinaContainer.cpp
+SOURCE	KeyEvents.cpp
+
+
+START RESOURCE ..\data\Kiina.rss
+HEADER
+TARGETPATH resource\apps
+LANG	SC
+END
+
+
+/*
+START BITMAP    Kiina.mbm
+TARGETPATH      \Resource\Apps
+SOURCE          c24,1 icon.bmp icon_mask.bmp
+END
+*/
+
+START RESOURCE ..\data\Kiina_reg.rss
+#ifdef WINSCW
+TARGETPATH 	  \private\10003a3f\apps
+#else
+TARGETPATH 	  \private\10003a3f\import\apps
+#endif
+END
+
+USERINCLUDE .
+USERINCLUDE ..\inc
+
+SYSTEMINCLUDE   . \epoc32\include
+
+LIBRARY euser.lib apparc.lib cone.lib eikcore.lib
+LIBRARY avkon.lib apmime.lib apgrfx.lib efsrv.lib eikcoctl.lib commonui.lib ecom.lib
+LIBRARY eikdlg.lib gdi.lib bitgdi.lib
+LIBRARY fbscli.lib bafl.lib estor.lib mediaclientaudio.lib 
+
+
+
+
+LIBRARY browserengine.lib
+

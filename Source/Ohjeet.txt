@@ -1,0 +1,18 @@
+UUSIEN KORTTIEN LUOMINEN
+
+Avaa card.xls ja liitä siihen merkit (FangSong 72), pinyin ja käännös (Times New Roman 24 bold).
+
+Kopioi (CTRL + C) ja liitä Paint Shop Prohon. Tallenna .bmp:nä nimellä cardXXXXX.bmp
+
+Avaa KeyEvents.cpp ja laita MaxFlashCards-arvoksi se, mikä on korttien lukumäärä.
+
+Sitten bmconv laulamaan:
+
+bmconv flashcard.mbm /1card1.bmp /1card2.bmp
+
+jne.
+
+Sitten viet flashcard.mbm-tiedoston osoitteeseen:
+C:\Symbian\9.2\S60_3rd_FP1\Epoc32\winscw\c\private\2002AA27
+
+Ja ajat GCCE buildin ja lopuksi makesis Kiina.pkg

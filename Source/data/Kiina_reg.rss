@@ -1,0 +1,41 @@
+/*
+* ============================================================================
+*  Name        : Kiina_reg.rss
+*  Part of     : Kiina
+*  Interface   : 
+*  Description : RSS for registration file for Kiina
+*  Version  :
+*
+*  Copyright (c) 2005-2006 Nokia Corporation.
+*  This material, including documentation and any related 
+*  computer programs, is protected by copyright controlled by 
+*  Nokia Corporation.
+* ============================================================================
+*/
+
+#include <appinfo.rh>
+#include <Kiina.rsg>
+
+UID2 KUidAppRegistrationResourceFile
+UID3 0x2002AA27
+
+
+RESOURCE APP_REGISTRATION_INFO
+    {
+    app_file = "Kiina";
+
+
+    localisable_resource_file = "\\resource\\apps\\Kiina";
+
+
+    localisable_resource_id = R_KIINA_LOCALISABLE_APP_INFO;
+    
+    embeddability = KAppEmbeddable;
+    newfile = KAppDoesNotSupportNewFile;
+    }
+
+
+
+
+// End of File
+
